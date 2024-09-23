@@ -1,0 +1,30 @@
+body{
+    background: rgb(194, 194, 194);
+}
+
+h1{
+    text-align: center;
+    border-left: 5px solid black;
+    border-right: 5px dotted;
+    border-top: 5px dashed;
+    border-bottom: 5px double;
+    background: blue;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px;
+}
+
+.paragrafos{
+    text-align: left;
+    background: grey;
+    margin-left: 5px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 500px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+/* trocando cor do título */
+h1:hover{
+    background: green;
+}

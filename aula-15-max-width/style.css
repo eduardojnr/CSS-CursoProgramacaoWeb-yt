@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+    color: rgb(123, 255, 0);
+}
+
+.ex1{
+    border: 1px dashed white;
+    width: 1350px;
+}
+
+.ex2{
+    border: 1px dashed white;
+    max-width: 1350px;
+}

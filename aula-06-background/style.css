@@ -1,0 +1,27 @@
+body{
+    background: rgb(194, 194, 194);
+}
+
+h1{
+    color: rgb(0, 0, 0);
+}
+
+.paragrafos{
+    color: red;
+    text-align: center;
+} 
+
+.exemplo-background-image{
+    height: 500px;
+    background-color: grey;
+    background-image: url("gt3rs.jpeg");
+    background-size: cover; /* adapta ao tamanho do elemento */
+    background-position: center;
+    /*
+    background-size: contain; repete o elemento pelo tamanho
+    background-repeat-y: repete no eixo Y
+    background-repeat-x: repete no eixo X
+    background-repeate: no repeat; não repete, o espaço restante fica pelo background-color
+    background-position: quando a imagem não cabe totalmente no espaço, ele pega o que consegue com base nessa declaração
+    */
+}

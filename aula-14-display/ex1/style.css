@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(0, 0, 0);
+    color: rgb(123, 255, 0);
+}
+
+.teste-block{
+    text-align: center;
+    border: 2px solid;
+    border-color: rgb(55, 83, 28);
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.teste-inline{
+    display: inline;
+    text-align: center;
+    border: 2px solid;
+    border-color: rgb(55, 83, 28);
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
