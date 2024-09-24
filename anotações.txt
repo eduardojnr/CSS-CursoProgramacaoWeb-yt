@@ -1,8 +1,9 @@
---- CSS inline --- 
+--- CSS inline ---
     Significa inserir um estilo diretamente na criação do elemento HTML. Ex:
     <body style="background: black">
         <div style="font-size: 50px; color: green"></div>
     </body>
+
 
 --- CSS incorporado ---
     Significa criar o estilo no mesmo arquivo HTML, dentro da tag <head>. Ex:
@@ -18,11 +19,13 @@
         </style>
     </head>
 
+
 --- CSS Externo ---
     Significa criar um ou mais arquivos CSS e invocá-los no <head>. Ex:
     <head>
         <link rel="stylesheet" href="arquivo.css">
     </head>
+
 
 --- Seletor por Classes ---
     É uma série de tags especificadas por um título que representa uma classe
@@ -37,8 +40,10 @@
     (CSS)
     .paragrafos{}
 
+
 --- Comentários ---
     /**/
+
 
 --- Seletor por Identificadores (id)
     Não pode haver mais de um elemento com um mesmo id
@@ -52,12 +57,14 @@
     (CSS)
     #paragrafos{}
 
+
 --- Seletor Universal ---
     Todas as tags receberão essa propriedade
     É referenciado por * no CSS
     Ex.:
     (CSS)
     *{}
+
 
 --- Agrupamento de Seletores ---
     Para diferentes elementos que receberão a mesma propriedade CSS
@@ -68,8 +75,12 @@
         text-allign: center;
     }
 
+
 --- background ---
     Exemplos na aula 06
+
+    background-image: url("");
+
 
 --- border ---
     Bordas de um elemento
@@ -98,6 +109,7 @@
 
     background: black;
 
+
 --- margin ---
     Espaçamento entre elementos e cantos
     Exemplos na aula 08
@@ -111,6 +123,7 @@
 
     ^ > v <
     margin: 25%, 50px, 10px, 5%;
+
 
 --- padding ---
     É um espaçamento dentro do próprio elemento
@@ -137,6 +150,7 @@
     max-width: 800px; - para elementos mais responsivos, adequando ao tamanho da tela
     max-height: 50%;
 
+
 --- Propriedade Text --- 
     text-allign: center | left | right | justify
     text-allign: 
@@ -159,12 +173,14 @@
     word-spacing: 5px;
     line-height: 0.8; espaçamento entrelinhas
 
+
 --- Fontes ---
     Google fonts para procurar fontes gratuitas
     font-family
     font-size
     font-style
     font-weight: bold - negrito
+
 
 --- Display ---
     Títulos, divs, parágrafos e outros são elementos naturalmente display block, ou seja, vão até o final da página, mesmo que não necessite.
@@ -177,29 +193,88 @@
     display: none || "retira" do HTML
                   || também posso fazer visibility: hidden  para apenas ocultar da página
 
---- max-width --- 
+
+--- max-width ---
     Faz com que os elementos tenham um tamanho máximo independente do tamanho da página, deixando mais organizado
 
     max-width: % | px
 
 
+--- position ---
+    Para posicionar um elemento dentro de outro
+
+    static
+        É o default
+    
+    relative - 
+        Para indicar a posição do elemento
+        É referente a posição original dele
+        
+        top | right ... - para posicionar
+        z-index - para fazer camadas de profundidade | quais elementos ficam mais acima (mais visiveis)
+
+    absolute
+        A localização é dada em relação ao elemento pai
+        Considera como elemento pai o primeiro que tiver position diferente de static
+        top | right ...
+    
+    sticky
+        Fica fixo durante a rolagem, dentro do seu elemento pai
+
+    fixed
+        Para que o elemento fique sempre parado, independente de rolagem
+        top | right ... - para posicionar
+    
+
+--- overflow ---
+    Situações em que o conteúdo de um elemento excede o tamanho do elemento
+    Não tem necessidade de usar overflow caso não tenha definido uma altura (height)
+    Isso porque o elemento irá adaptar o tamanho de acordo com o seu conteúdo
+
+    visible
+        Significa que será mostrado, mesmo que "estoure" o tamanho do elemento
+
+    hidden
+        Significa que será mostrado somente o que coube no elemento 
+
+    scroll
+        Sempre coloca barras de rolagem para ver todo o conteúdo
+
+    auto
+        Coloca barras de rolagem somente quando necessário
+
+    Para configurar overflow somente para o eixo X ou Y:
+        overflow-y
+        overflow-x
 
 
+--- float ---
+    Para deixar um elemento flutuando em algum ponto e outro elemento ao seu lado
+    
+    Para "se livrar" de uma flutuação, o elemento seguinte pode vir com 'clear:both'
 
 
+--- Imagens aleatórias para criação ---
+    https://picsum.photos/200/300/
+    200 - width
+    300 - height
 
 
+--- opacity ---
+    Escala de 0 a 1
+    
+    opacity: 0.9
 
 
-
-
-
+--- dropdown ---
+    Aula 20
 
 
 --- Alterar cor do elemento ---
     .classe:hover{
         background: color;
     }
+
 
 --- Tirar o sublinhado de botões de links ---
     text-decoration: none;
