@@ -1,0 +1,28 @@
+.container{
+    background: blue;
+    height: 400px;
+    width: 100%;
+}
+
+.div1{
+    background: yellow;
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+    position: relative;
+    top: 100px;
+}
+
+.div2{
+    background: white;
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+}
+
+.div3{
+    background: red;
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+}

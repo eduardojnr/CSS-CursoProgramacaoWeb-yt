@@ -1,0 +1,25 @@
+.container{
+    text-align: center;
+    background: blue;
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
+
+.div1{
+    background: yellow;
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+    position: relative;
+}
+
+.div2{
+    background: rgb(255, 0, 0);
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+    position: sticky;
+    top: 0px;
+}
+

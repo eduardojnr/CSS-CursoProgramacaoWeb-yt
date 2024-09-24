@@ -1,0 +1,16 @@
+.container{
+    border: 1px solid black;
+    overflow: auto;
+    width: 700px;
+    margin-left: 10px;
+}
+
+.container img{
+    width: 400px;
+    float: left;
+    margin-right: 10px;
+}
+
+.container h3{
+    clear: both;
+}
