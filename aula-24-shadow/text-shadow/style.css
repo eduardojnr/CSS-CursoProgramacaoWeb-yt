@@ -1,0 +1,15 @@
+#titulo1{
+    text-shadow: 2px 2px red;
+}
+
+#titulo2{
+    text-shadow: 2px 4px red;
+}
+
+#titulo3{
+    text-shadow: 4px 2px red;
+}
+
+#titulo4{
+    text-shadow: 4px 2px 4px red;
+}

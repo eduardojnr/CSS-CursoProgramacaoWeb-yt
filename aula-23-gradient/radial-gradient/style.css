@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+
+#div1{
+    width: 100%;
+    height: 100px;
+    background-image: radial-gradient(black, grey, white)
+}
+
+#div2{
+    width: 100%;
+    height: 100px;
+    background-image: radial-gradient(red 50%, orange, green)
+}

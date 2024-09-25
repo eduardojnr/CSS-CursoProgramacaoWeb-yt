@@ -24,6 +24,7 @@
     Significa criar um ou mais arquivos CSS e invocá-los no <head>. Ex:
     <head>
         <link rel="stylesheet" href="arquivo.css">
+        <link rel="stylesheet" href="arquivo2.css">
     </head>
 
 
@@ -268,6 +269,103 @@
 
 --- dropdown ---
     Aula 20
+
+
+--- Especificidade ---
+    Ordem de prioridade para estilos repetidos em diferentes tags.
+    Ex.:
+    Classes tem prioridade em relação a seletor simples
+    .classe > tag
+    .classe > tag
+
+    Regra geral:
+    #id
+    tag.classe
+    .classe
+    tag
+
+
+--- important ---
+    Quebra a regra de especificidade acima
+    
+    Ex.:
+    #minhadiv{background: black}
+    div{background: green !important} - Essa linha será entendida
+
+
+--- Efeito gradient ---
+    background-image: linear-gradient(black, grey, white)
+    background-image: linear-gradient(to left, black, grey, white)
+    background-image: linear-gradient(to bottom right, black, grey, white)
+    background-image: linear-gradient(60deg, black, grey, white) // graus
+
+    background-image: radial-gradient(black, grey, white)
+    background-image: radial-gradient(black 50%, grey 40%, white 10%)
+
+
+--- text shadow --- (aula 24)
+    text-shadow: tamanho pra direita tamanho para baixo quantidade opacidade cor
+    text-shadow: 2px 4px 1px red
+
+    É possível fazer mais de uma sombra para a mesma tag, basta fazer virgula ao final e definir a próxima
+    text-shadow: 2px 4px 1px red, 1px 1px 0px yellow
+
+
+--- box shadow --- (aula 24)
+    box-shadow: tamanho pra direita tamanho para baixo quantidade opacidade cor
+    box-shadow: 2px 4px 1px red
+
+    Exemplo de sombra bastante usado
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+
+
+--- Efeitos de texto ---
+    Para textos que não cabem no elemento
+    Exemplos aula 25
+
+
+--- Media Queries
+    Responsividade da tela de acordo com os diferentes tamanhos de tela existente
+    @media only screen and (max-width: 600px) {...} // Apenas valor minimo
+    @media screen and (max-width: 600px) and (min-width:900px){...} // Valor entre um e outro
+
+    /* Smartphones (600px para baixo) */
+    @media only screen and (max-width: 600px) {...}
+
+    /* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+    @media only screen and (min-width: 600px) {...}
+
+    /*Dispostivos Médios (Tablets deitados, 768px para cima) */
+    @media only screen and (min-width: 768px) {...}
+
+    /* Dispostivos Largos (laptops/desktops, 992px para cima) */
+    @media only screen and (min-width: 992px) {...}
+
+    /* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+    @media only screen and (min-width: 1200px) {...}
+
+
+--- flexbox ---
+    É um tipo de display
+
+    display: flex;
+    flex-direction: column | row;
+    flex-direction: column-reverse | row-reverse;
+    flex-wrap: nowrap(default) | wrap
+
+    flex-flow: row wrap; (comando com atalho para os de cima)
+
+    - para organizar os elementos dentro do pai em questão horizontal
+    justify-content: flex-start | flex-end | space-between | space-around | ...;
+
+    - para organizar os elementos dentro do pai em questão vertical
+    allign-items: flex-start | flex-end | space-between | space-around | ...;
+
+    - para organizar todo o conteúdo
+    allign-content: flex-start | flex-end | ...;
+
+    - para fazer que todas as tags filhas cresçam uniformemente conforme a tag pai | utilizar na tag filha
+    flex-grow: 1;
 
 
 --- Alterar cor do elemento ---

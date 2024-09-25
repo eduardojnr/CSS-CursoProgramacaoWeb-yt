@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+.caixa{
+    border: 1px solid black;
+    width: 400px;
+    height: auto;
+    position: relative;
+    left: 35%;
+}
+
+h2{
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+h2:hover{
+    white-space: normal;
+}
+
+p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+p:hover{
+    white-space: normal;
+}
+
+img{
+    height: 200px;
+    width: 400px;
+}
+
