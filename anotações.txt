@@ -351,7 +351,8 @@
     display: flex;
     flex-direction: column | row;
     flex-direction: column-reverse | row-reverse;
-    flex-wrap: nowrap(default) | wrap
+    flex-wrap: nowrap(default) - ultrapassa o tamanho do elemento pai
+    flex-wrap: nowrap - aumenta o tamanho do elemento pai
 
     flex-flow: row wrap; (comando com atalho para os de cima)
 
@@ -359,7 +360,7 @@
     justify-content: flex-start | flex-end | space-between | space-around | ...;
 
     - para organizar os elementos dentro do pai em questão vertical
-    allign-items: flex-start | flex-end | space-between | space-around | ...;
+    align-items: flex-start | flex-end | space-between | space-around | ...;
 
     - para organizar todo o conteúdo
     allign-content: flex-start | flex-end | ...;
