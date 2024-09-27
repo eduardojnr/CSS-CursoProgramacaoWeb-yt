@@ -251,8 +251,12 @@
 
 --- float ---
     Para deixar um elemento flutuando em algum ponto e outro elemento ao seu lado
-    
     Para "se livrar" de uma flutuação, o elemento seguinte pode vir com 'clear:both'
+
+    float: left;
+    float: right;
+
+    Combina com 'overflow:auto' no conteiner
 
 
 --- Imagens aleatórias para criação ---
@@ -349,24 +353,86 @@
     É um tipo de display
 
     display: flex;
-    flex-direction: column | row;
+    flex-direction: column | row ;
     flex-direction: column-reverse | row-reverse;
     flex-wrap: nowrap(default) - ultrapassa o tamanho do elemento pai
-    flex-wrap: nowrap - aumenta o tamanho do elemento pai
-
+    flex-wrap: wrap - aumenta o tamanho do elemento pai
     flex-flow: row wrap; (comando com atalho para os de cima)
 
     - para organizar os elementos dentro do pai em questão horizontal
     justify-content: flex-start | flex-end | space-between | space-around | ...;
+    justify-items: ...
 
     - para organizar os elementos dentro do pai em questão vertical
-    align-items: flex-start | flex-end | space-between | space-around | ...;
-
-    - para organizar todo o conteúdo
+    align-items: stretch (default) | flex-start | flex-end | space-between | space-around | ...;
     allign-content: flex-start | flex-end | ...;
+
+    - para organizar os elementos dentro de seu próprio estilo
+    align-self: flex-start | flex-end | ...;
+
+    items -> considera os elementos a nível individual
+    content -> considera todo o bloco em conjunto
+
+    - para espaçamento entre os elementos
+    row-gap: 5px;
+    column-gap: 10px;
+    gap: 5px 10px;
 
     - para fazer que todas as tags filhas cresçam uniformemente conforme a tag pai | utilizar na tag filha
     flex-grow: 1;
+
+    - para fazer que todas as tags filhas diminuam uniformemente conforme a tag pai | utilizar na tag filha
+      só faz sentido com uma largura do pai definida e nowrap ativo
+    flex-shrink: 2;
+
+    - para definir o tamanho do elemento
+    flex-basis
+    flex-basis: auto | 0 | 1 ...
+
+    - para unir flex-grow, flex-shrink e flex-basis
+    flex: 1, 2, auto;
+
+    - para organizar a ordem dos elementos, basta colocar em cada tag
+      se colocar mais de uma tag com mesmo order, irá intercalar
+    order: -1 | 0 | 1 ...
+
+
+--- grid box --- https://www.youtube.com/watch?v=NvnJRLTG_5Y&ab_channel=FernandaKipper%7CDev
+                 https://www.youtube.com/watch?v=x-4z_u8LcGc&t=1440s&ab_channel=Origamid
+
+    - para dividir os elementos em linhas e colunas
+    display: grid;
+
+    grid-template-columns: 300px 100px (duas colunas de tamanhos especificos)
+    grid-template-columns: 1fr 1fr (duas colunas de frações de tamanho igual)
+    grid-template-columns: repeat(2 1fr) (duas colunas de frações de tamanho igual)
+    grid-template-columns: repeat(auto-fill, 200px) (cria uma nova coluna sempre que tiver 200px livres | bom para responsividade)
+    grid-template-rows: 300px 100px (duas linhas de tamanhos especificos)
+    grid-template-rows: 1fr 1fr (duas linhas de frações de tamanho igual)
+
+    gap: 20px (espaçamento entre elementos)
+
+    align-items: start | center | end (eixo y)
+    justify-items: start | center | end (eixo x)
+
+    - para ordenar os elementos
+      definir no proprio estilo do elemento
+    grid-colum: 1 | 2 ...
+    grid-row: 1 | 2 ...
+
+        OU
+
+      ¹definir no proprio estilo do elemento um nome para ele | ²no conteiner, escrever uma string para cada linha, contendo os nomes das areas
+    Ex.: 2x2
+    ¹grid-area: area1
+     grid-area: area2
+     grid-area: area3
+     grid-area: area4
+    ²grid-template-areas: "area4 area2" "area1 area3"
+
+    - para que um elemento ocupe na linha o espaço de mais de duas ou mais
+      a linha superior ao primeiro elemento também entra na conta, ou seja, basicamente existe uma linha a mais do que contamos a olho nu
+    grid-row: 2 / 5 (espaço da linha 2 até a 5)
 
 
 --- Alterar cor do elemento ---
